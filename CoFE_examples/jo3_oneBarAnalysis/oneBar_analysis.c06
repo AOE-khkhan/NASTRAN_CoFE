@@ -66,7 +66,7 @@
   is asked to cite the author's associated work.  
  
  --------------------------------------------------------------------------- 
-   This case was run 20-Apr-2020 18:20:59 
+   This case was run 23-Apr-2020 17:53:56 
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
  |                        S U B C A S E  1                               | 
@@ -77,18 +77,56 @@
                                  S T A T I C     D I S P L A C E M E N T S
      GRID
       ID.              T1             T2               T3             R1               R2             R3
-       11 		 +1.785684E-03 	 -5.952381E-04 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 
-       12 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 
-       13 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 
+       11 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 
+       12 		 -1.782531E-04 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 
 
 
-         F O R C E S   I N   R O D   E L E M E N T S     ( C R O D )
-    ELEMENT       AXIAL                             ELEMENT           AXIAL
-      ID.         FORCE          TORQUE               ID.             FORCE          TORQUE
-       21 		 +7.071068E+04 	 +0.000000E+00	       22 		 -5.000000E+04 	 +0.000000E+00
+         F O R C E S   I N   B E A M   E L E M E N T S        ( C B E A M )
+                       - BENDING MOMENTS -              - WEB  SHEARS -              AXIAL          TOTAL
+ELEMENT-ID  GRID     PLANE 1         PLANE 2        PLANE 1         PLANE 2          FORCE          TORQUE
+ 21
+		 11 	 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 	 -1.000000E+01 	 -0.000000E+00 
+		 12 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 -1.000000E+01 	 +0.000000E+00 
 
 
-         S T R E S S E S   I N   R O D   E L E M E N T S      ( C R O D )
-    ELEMENT       AXIAL         TORSIONAL           ELEMENT           AXIAL        TORSIONAL
-      ID.        STRESS          STRESS               ID.            STRESS          STRESS
-       21 		 +1.249968E+08 			 N/A	       22 		 -1.250000E+08 			 N/A
+         S T R E S S E S   I N   B E A M   E L E M E N T S        ( C B E A M )
+ELEMENT-ID GRID       SXC             SXD             SXE             SXF
+ 21
+		 11 	 -5.347594E+01 	 -5.347594E+01 	 -5.347594E+01 	 -5.347594E+01
+		 12 	 -5.347594E+01 	 -5.347594E+01 	 -5.347594E+01 	 -5.347594E+01
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ |                        S U B C A S E  2                               | 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+                          B U C K L I N G     E I G E N V A L U E S  
+ MODE NO. 	 EIGENVALUE 
+	 1 	 +7.560000E+00 
+	 2 	 +1.404000E+01 
+	 3 	 +3.779868E+01 
+
+
+                          B U C K L I N G     E I G E N V E C T O R     N O.  1 
+ Buckling Load Factor = 7.56 
+     GRID
+      ID.              T1             T2               T3             R1               R2             R3
+       11 		 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 	 -1.992048E-02 	 -0.000000E+00 
+       12 		 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 	 +1.992048E-02 	 -0.000000E+00 
+
+
+                          B U C K L I N G     E I G E N V E C T O R     N O.  2 
+ Buckling Load Factor = 14.04 
+     GRID
+      ID.              T1             T2               T3             R1               R2             R3
+       11 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 -1.461763E-02 
+       12 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +1.461763E-02 
+
+
+                          B U C K L I N G     E I G E N V E C T O R     N O.  3 
+ Buckling Load Factor = 37.7987 
+     GRID
+      ID.              T1             T2               T3             R1               R2             R3
+       11 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +1.150129E-02 	 +0.000000E+00 
+       12 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +1.150129E-02 	 +0.000000E+00 
