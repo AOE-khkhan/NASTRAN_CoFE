@@ -3,6 +3,7 @@ function [] = write_c06(obj,fid)
 %%    S T A T I C     D I S P L A C E M E N T S
 if obj.CASE.SOL == 101
 ct = 0;
+disp('Writing SOL101 results in C06 file');
 for i = 1:1:obj.nnodes
     
     if ct == 0
@@ -32,6 +33,7 @@ end
 
 %%    V I B R A T I O N     F R E Q U E N C I E S
 if obj.CASE.SOL == 103
+    disp('Writing SOL103 results in C06 file');
 fprintf(fid,'\n\n                          V I B R A T I O N     F R E Q U E N C I E S \n');
 fprintf(fid,' MODE NO. \t FREQUENCY (Hz) \n');
 for mn = 1:obj.ND
@@ -64,6 +66,7 @@ end
 
 %%    B U C K L I N G     E I G E N V A L U E S 
 if obj.CASE.SOL == 105
+    disp('Writing SOL105 results in C06 file');
 fprintf(fid,'\n\n                          B U C K L I N G     E I G E N V A L U E S  \n');
 fprintf(fid,' MODE NO. \t EIGENVALUE \n');
 for mn = 1:obj.ND

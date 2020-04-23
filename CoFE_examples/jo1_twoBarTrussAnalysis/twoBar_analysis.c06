@@ -1,0 +1,94 @@
+
+                    $ $ $
+          $ $ $ $ $ $ $ $ $ $ $
+     $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $
+              $ $ $ $ $ $ $ $ $ $ $ $ $ $
+                       $ $ $ $ $ $ $ $ $
+                           $ $ $ $ $ $ $ $
+                                $ $ $ $ $ $
+                                    $ $ $ $
+                                    $ $ $
+                                  $ $ $
+                     $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                     $$                           $$
+               $$$$$$$$     NASTRAN Compatible    $$
+              $$     $$   Finite Elements (CoFE)  $$
+             $$      $$                           $$
+              $$     $$   By: Anthony Ricciardi   $$
+               $$    $$         2013-2016         $$
+                $$   $$       pasquale@vt.edu     $$
+                 $$  $$                           $$
+                  $$$$$  vtpasquale.github.io/... $$
+                     $$       NASTRAN_CoFE        $$
+                     $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+  
+  
+ --------------------------------------------------------------------------- 
+  
+   Copyright (c) 2016 Anthony Ricciardi <pasquale@vt.edu> 
+  
+   Permission is hereby granted, free of charge, to any person obtaining a copy 
+   of this software and associated documentation files (the "Software"), to deal 
+   in the Software without restriction, including without limitation the rights 
+   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+   copies of the Software, and to permit persons to whom the Software is 
+   furnished to do so, subject to the following conditions: 
+  
+   The above copyright notice and this permission notice shall be included in all 
+   copies or substantial portions of the Software. 
+  
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+   SOFTWARE. 
+  
+ --------------------------------------------------------------------------- 
+  
+   NASTRAN is a registered trademark of the National Aeronautics and Space  
+   Administration.   
+  
+   MSC Nastran is a registered trademark of MSC Software Corporation.       
+  
+ --------------------------------------------------------------------------- 
+
+  PUBLICATION
+  The Software was originally created to produce results for the following 
+  article:
+
+  Ricciardi, A. P., Canfield, R. A., Patil, M. P., and Lindsley, N., 
+  ``Nonlinear Aeroelastic Scaled-Model Design,'' doi: 10.2514/1.C033171. 
+  Journal of Aircraft, Vol. 53, No. 1 (2016), pp. 20-32.
+
+  If the Software is used to generate results for published work, the user 
+  is asked to cite the author's associated work.  
+ 
+ --------------------------------------------------------------------------- 
+   This case was run 20-Apr-2020 18:20:59 
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ |                        S U B C A S E  1                               | 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+                                 S T A T I C     D I S P L A C E M E N T S
+     GRID
+      ID.              T1             T2               T3             R1               R2             R3
+       11 		 +1.785684E-03 	 -5.952381E-04 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 
+       12 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 
+       13 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 
+
+
+         F O R C E S   I N   R O D   E L E M E N T S     ( C R O D )
+    ELEMENT       AXIAL                             ELEMENT           AXIAL
+      ID.         FORCE          TORQUE               ID.             FORCE          TORQUE
+       21 		 +7.071068E+04 	 +0.000000E+00	       22 		 -5.000000E+04 	 +0.000000E+00
+
+
+         S T R E S S E S   I N   R O D   E L E M E N T S      ( C R O D )
+    ELEMENT       AXIAL         TORSIONAL           ELEMENT           AXIAL        TORSIONAL
+      ID.        STRESS          STRESS               ID.            STRESS          STRESS
+       21 		 +1.249968E+08 			 N/A	       22 		 -1.250000E+08 			 N/A
