@@ -1,0 +1,132 @@
+
+                    $ $ $
+          $ $ $ $ $ $ $ $ $ $ $
+     $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $
+              $ $ $ $ $ $ $ $ $ $ $ $ $ $
+                       $ $ $ $ $ $ $ $ $
+                           $ $ $ $ $ $ $ $
+                                $ $ $ $ $ $
+                                    $ $ $ $
+                                    $ $ $
+                                  $ $ $
+                     $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                     $$                           $$
+               $$$$$$$$     NASTRAN Compatible    $$
+              $$     $$   Finite Elements (CoFE)  $$
+             $$      $$                           $$
+              $$     $$   By: Anthony Ricciardi   $$
+               $$    $$         2013-2016         $$
+                $$   $$       pasquale@vt.edu     $$
+                 $$  $$                           $$
+                  $$$$$  vtpasquale.github.io/... $$
+                     $$       NASTRAN_CoFE        $$
+                     $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+  
+  
+ --------------------------------------------------------------------------- 
+  
+   Copyright (c) 2016 Anthony Ricciardi <pasquale@vt.edu> 
+  
+   Permission is hereby granted, free of charge, to any person obtaining a copy 
+   of this software and associated documentation files (the "Software"), to deal 
+   in the Software without restriction, including without limitation the rights 
+   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+   copies of the Software, and to permit persons to whom the Software is 
+   furnished to do so, subject to the following conditions: 
+  
+   The above copyright notice and this permission notice shall be included in all 
+   copies or substantial portions of the Software. 
+  
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+   SOFTWARE. 
+  
+ --------------------------------------------------------------------------- 
+  
+   NASTRAN is a registered trademark of the National Aeronautics and Space  
+   Administration.   
+  
+   MSC Nastran is a registered trademark of MSC Software Corporation.       
+  
+ --------------------------------------------------------------------------- 
+
+  PUBLICATION
+  The Software was originally created to produce results for the following 
+  article:
+
+  Ricciardi, A. P., Canfield, R. A., Patil, M. P., and Lindsley, N., 
+  ``Nonlinear Aeroelastic Scaled-Model Design,'' doi: 10.2514/1.C033171. 
+  Journal of Aircraft, Vol. 53, No. 1 (2016), pp. 20-32.
+
+  If the Software is used to generate results for published work, the user 
+  is asked to cite the author's associated work.  
+ 
+ --------------------------------------------------------------------------- 
+   This case was run 16-Apr-2020 16:27:00 
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ |                        S U B C A S E  1                               | 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+                                 S T A T I C     D I S P L A C E M E N T S
+     GRID
+      ID.              T1             T2               T3             R1               R2             R3
+       11 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 
+       12 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 -8.675302E-04 
+       13 		 +0.000000E+00 	 -4.068584E-02 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 -1.379532E-03 
+
+
+         F O R C E S   I N   B E A M   E L E M E N T S        ( C B E A M )
+                       - BENDING MOMENTS -              - WEB  SHEARS -              AXIAL          TOTAL
+ELEMENT-ID  GRID     PLANE 1         PLANE 2        PLANE 1         PLANE 2          FORCE          TORQUE
+ 21
+		 11 	 -1.111021E+02 	 -0.000000E+00 	 +3.056118E+00 	 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 
+		 12 	 -1.600000E+02 	 +0.000000E+00 	 +3.056118E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 
+ 22
+		 12 	 -1.600000E+02 	 -0.000000E+00 	 -1.000000E+01 	 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 
+		 13 	 -5.818940E-15 	 +0.000000E+00 	 -1.000000E+01 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 
+
+
+         S T R E S S E S   I N   B E A M   E L E M E N T S        ( C B E A M )
+ELEMENT-ID GRID       SXC             SXD             SXE             SXF
+ 21
+		 11 	 +6.666153E+02 	 -6.666153E+02 	 -6.666153E+02 	 +6.666153E+02
+		 12 	 +9.600038E+02 	 -9.600038E+02 	 -9.600038E+02 	 +9.600038E+02
+ 22
+		 12 	 +9.600038E+02 	 -9.600038E+02 	 -9.600038E+02 	 +9.600038E+02
+		 13 	 +3.491378E-14 	 -3.491378E-14 	 -3.491378E-14 	 +3.491378E-14
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ |                        S U B C A S E  2                               | 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+                          V I B R A T I O N     F R E Q U E N C I E S 
+ MODE NO. 	 FREQUENCY (Hz) 
+	 1 	 2.390077E-02 
+	 2 	 2.929751E-02 
+
+
+                          V I B R A T I O N     E I G E N V E C T O R     N O.  1 
+ Frequency = 0.0239008 Hz 
+     GRID
+      ID.              T1             T2               T3             R1               R2             R3
+       11 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 
+       12 		 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +2.031482E-04 
+       13 		 +0.000000E+00 	 +9.543639E-03 	 +0.000000E+00 	 +0.000000E+00 	 +0.000000E+00 	 +2.934026E-04 
+
+
+                          V I B R A T I O N     E I G E N V E C T O R     N O.  2 
+ Frequency = 0.0292975 Hz 
+     GRID
+      ID.              T1             T2               T3             R1               R2             R3
+       11 		 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 
+       12 		 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 	 -0.000000E+00 
+       13 		 -0.000000E+00 	 -0.000000E+00 	 +9.478538E-03 	 -0.000000E+00 	 -1.362950E-04 	 -0.000000E+00 
